@@ -167,13 +167,12 @@
 
 .main{
     background: #141414;
-    height: 1000px;
 }
 
 .main_container{
     width: 100%;
     max-width: 1300px;
-    height: 90hv;
+    height: 90vh;
 
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -286,4 +285,11 @@
     }
 
 
+}
+
+
+/* services */
+.services{
+    background : #141414;
+    height : 90vh;
 }
