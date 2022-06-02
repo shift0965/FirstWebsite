@@ -1,0 +1,156 @@
+
+.navbar{
+    background: #141414;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size : 22px;
+    position: sticky; 
+    top: 0px;
+    z-index:99;
+}
+
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    height: 80px;
+    z-index:1;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+
+#navbar_logo{
+    
+    background-color: #ff8177;
+    background-image: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar_manu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+.navbar_item{
+    height: 80px;
+}
+
+.navbar_links{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+.navbar_btn{
+    height: 80px;
+    padding: 20px 10px;
+}
+
+.signup_button{
+    background: #f77062;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.signup_button:hover{
+    background: #4837ff;
+    transition: all 0.3s;
+}
+
+.navbar_links:hover{
+    color: #f77062;
+    transition: all 0.3s;
+}
+
+
+@media screen and (max-width: 600px){
+    .navbar_container{
+        display: flex;
+        justify-content: space-between;
+        height:80px;
+        z-index:1;
+        max-width: 1300px;
+        width: 100%;
+        padding: 0;  
+    }
+
+    #navbar_logo{
+        margin: auto 10px;
+    }
+
+    .navbar_manu{
+        display: grid;
+        width: 100%;
+        height: 60hv;
+        justify-content: center;
+        position: absolute;
+        z-index:-1;
+        top:-500px;
+        opacity: 0;
+        font-size :24px;
+        transition: all 0.5s;
+    }
+
+    .navbar_manu.active{
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+    }
+
+    .navbar_toggle{
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        top: 15%;
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
+    }
+
+    .navbar_toggle .bar{
+        width: 30px;   
+        height: 3.5px;
+        margin: 6.5px auto;
+        background : white;
+        transition: all 0.5s;
+        display: block;
+        border-radius: 2px;
+    }
+
+    .navbar_toggle.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .navbar_toggle.is-active .bar:nth-child(1){
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .navbar_toggle.is-active .bar:nth-child(3){
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    
+}
